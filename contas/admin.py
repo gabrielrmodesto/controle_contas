@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Categoria
+from .models import Transacao
 
 admin.site.register(Categoria)
-
-# Register your models here.
+admin.site.register(Transacao)
