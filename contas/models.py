@@ -5,6 +5,9 @@ class Categoria(models.Model):
     nome = models.CharField(max_length=100)
     dt_criacao = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name = 'Categoria'
+
 
 class Transacao(models.Model):
     data = models.DateTimeField(auto_now_add=True)
