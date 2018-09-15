@@ -10,5 +10,16 @@
     <h1>Template</h1>
     <h2>Template</h2>
     <h3>Template</h3>
+
+    <p>Agora são:  {{ now }}</p>
+    <ul>
+    {% for transacao in transacoes %}
+        {% if transacao == "t3" %}
+        <li><b>{{ transacao }}</b></li>
+        {% else %}
+        <li>{{ transacao }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
 </body>
 </html>
