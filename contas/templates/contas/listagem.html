@@ -10,7 +10,7 @@
     <h2>Listagem de transações</h2>
     <ul>
         {% for transacao in transacoes %}
-            <li>{{ transacao.descricao }} - {{ transacao.data }} - {{ transacao.valor }} - {{ transacao.categoria }}</li>
+        <li><a href="{% url 'atualizar' transacao.id %}">{{ transacao.descricao }} - {{ transacao.data }} - {{ transacao.valor }} - {{ transacao.categoria }}</li></li>
         {% endfor %}
     </ul>
 
