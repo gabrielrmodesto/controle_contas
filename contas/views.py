@@ -33,8 +33,13 @@ def update(request, pk):
 
     if form.is_valid():
         form.save()
-        return redirect('atualizar')
+        return redirect('lista_transacao')
 
     data['form'] = form
     data['transacao'] = transacao
     return render(request, 'contas/form.html', data)
+
+def delete(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    transacao.delete()
+    return redirect('lista_transacao')
