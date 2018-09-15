@@ -13,5 +13,7 @@
             <li>{{ transacao.descricao }} - {{ transacao.data }} - {{ transacao.valor }} - {{ transacao.categoria }}</li>
         {% endfor %}
     </ul>
+
+    <a href="{% url 'cadastra_transacao' %}">Novo</a>
 </body>
 </html>
